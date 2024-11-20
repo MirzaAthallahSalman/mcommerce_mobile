@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mcommerce_mobile/widgets/left_drawer.dart';
-import 'package:mcommerce_mobile/productentry_form.dart';
+import 'package:mcommerce_mobile/screens/productentry_form.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});

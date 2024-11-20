@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mcommerce_mobile/menu.dart';
-import 'package:mcommerce_mobile/productentry_form.dart';
+import 'package:mcommerce_mobile/screens/menu.dart';
+import 'package:mcommerce_mobile/screens/productentry_form.dart';
+import 'package:mcommerce_mobile/screens/list_productentry.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -33,7 +34,7 @@ class LeftDrawer extends StatelessWidget {
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
                     color: Colors.white,
-                  ),
+                  )
                 ),
               ],
             ),
@@ -55,12 +56,23 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Tambah Produk'),
             // Bagian redirection ke MoodEntryFormPage
             onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProductEntryFormPage(),
-                  ));
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ProductEntryFormPage(),
+                ));
             },
+          ),
+          ListTile(
+              leading: const Icon(Icons.add_reaction_rounded),
+              title: const Text('Daftar Produk'),
+              onTap: () {
+                  // Route menu ke halaman mood
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ProductEntryPage()),
+                  );
+              },
           ),
         ],
       ),
